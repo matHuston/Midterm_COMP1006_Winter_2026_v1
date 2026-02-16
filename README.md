@@ -1,140 +1,76 @@
-📄 README.md
-Event Registration System – Exam Application
-Event Registration System
+# Event Registration System
 
-This project is part of your practical exam.
+## Overview
 
-You are required to build a simple Event Registration System using PHP and PDO. The application must allow users to register for an event and allow the administrator to manage registrations.
+In this project, you will build a simple **Event Registration System** using PHP and PDO.
 
-Project Setup
+Users must be able to register for an event. When the form is submitted, the data must be validated on the server and then stored in the database.
 
-Import the provided SQL into your local MySQL server.
+The administrator must be able to:
 
-Ensure your connect.php file properly connects to the database.
+- View all registrations
+- Update existing registrations
+- Delete registrations
 
-All database interactions must use PDO.
+All database interactions must use PDO and prepared statements.
 
-Database Structure
+---
 
-Table: registrations
+## Database Table
 
-Fields:
+You will work with a table named:
 
-id (Primary Key, Auto Increment)
+`registrations`
 
-first_name
+### Table Fields
 
-last_name
+- `id` (Primary Key, Auto Increment)
+- `first_name`
+- `last_name`
+- `email`
+- `phone`
+- `created_at`
 
-email
+Your application must connect to the database using PDO.
 
-phone
+---
 
-created_at
+# Application Requirements
 
-Application Requirements
-1. Create (Insert)
+## 1. Create (Insert and Store in Database)
 
 Create a form that collects:
 
-First Name
+- First Name
+- Last Name
+- Email
+- Phone
 
-Last Name
+The form must:
 
-Email
+- Use the `POST` method
+- Submit to a PHP processing script
+- Validate all input on the server
+- Insert the validated data into the `registrations` table
 
-Phone
+After a successful insert:
 
-The form must use the POST method.
+- Display a confirmation message
+- Retrieve all records from the database
+- Display them in an HTML table
 
-2. Server-Side Validation
+Data must actually be saved to the database.
+
+---
+
+## 2. Server-Side Validation
+
+All validation must occur on the server.
 
 You must:
 
-Confirm the form was submitted using:
+- Confirm the form was submitted using:
 
+```php
 $_SERVER['REQUEST_METHOD'] === 'POST'
 
-
-Use filter_input() to retrieve all form values
-
-Use trim() to remove whitespace
-
-Ensure first name, last name, and phone:
-
-Are not null
-
-Are not empty
-
-Are not whitespace only
-
-Validate email format using:
-
-filter_var($email, FILTER_VALIDATE_EMAIL)
-
-
-If validation fails:
-
-Display an error message
-
-Stop execution using exit;
-
-3. Database Interaction
-
-You must:
-
-Store SQL queries in variables before preparing them
-
-Use prepare()
-
-Use bindParam()
-
-Use execute()
-
-Use prepared statements for ALL database operations
-
-Do NOT insert raw user input directly into SQL.
-
-4. Read (Display Records)
-
-Display all registrations in an HTML table
-
-Use a loop (e.g., foreach) to generate the table dynamically
-
-5. Update and Delete
-
-Include an Update button for each record
-
-Include a Delete button for each record
-
-Create separate scripts for update and delete
-
-Use prepared statements in both scripts
-
-Technical Expectations
-
-Your solution must clearly demonstrate:
-
-Variables
-
-Conditional statements
-
-Loops
-
-Server-side validation
-
-CRUD operations
-
-Dynamic HTML generation
-
-Basic separation of concerns (e.g., includes for header/footer)
-
-Submission Requirements
-
-Submit your full project folder
-
-Include all PHP files
-
-Ensure your code runs without fatal errors
-
-All validation must be server-side
