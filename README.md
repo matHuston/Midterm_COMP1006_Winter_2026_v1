@@ -2,75 +2,87 @@
 
 ## Overview
 
-In this project, you will build a simple **Event Registration System** using PHP and PDO.
+Using the **provided SQL** (to create the database table) and the **provided HTML form**, you will build a simple PHP + database CRUD application.
 
-Users must be able to register for an event. When the form is submitted, the data must be validated on the server and then stored in the database.
-
-The administrator must be able to:
-
-- View all registrations
-- Update existing registrations
-- Delete registrations
-
-All database interactions must use PDO and prepared statements.
+Users must be able to register for an event, and an administrator must be able to manage registrations.
 
 ---
 
-## Database Table
+## Your Task
 
-You will work with a table named:
+### 1) Create a New Repository
 
-`registrations`
-
-### Table Fields
-
-- `id` (Primary Key, Auto Increment)
-- `first_name`
-- `last_name`
-- `email`
-- `phone`
-- `created_at`
-
-Your application must connect to the database using PDO.
+- Create a **new GitHub repository** for this exam question.
+- Build your application inside that repository.
+- When finished, submit the **link to your repository** as your answer in the LMS.
 
 ---
 
-# Application Requirements
+### 2) Set Up the Database
 
-## 1. Create (Insert and Store in Database)
-
-Create a form that collects:
-
-- First Name
-- Last Name
-- Email
-- Phone
-
-The form must:
-
-- Use the `POST` method
-- Submit to a PHP processing script
-- Validate all input on the server
-- Insert the validated data into the `registrations` table
-
-After a successful insert:
-
-- Display a confirmation message
-- Retrieve all records from the database
-- Display them in an HTML table
-
-Data must actually be saved to the database.
+- Run the **provided SQL** to create the required table.
+- Connect your PHP application to the database.
 
 ---
 
-## 2. Server-Side Validation
+### 3) Registration Form
 
-All validation must occur on the server.
+Using the provided HTML form:
 
-You must:
+- Accept user input and submit it to the server
+- **Sanitize and validate** the form data on the server
+- If valid, **store the registration in the database**
+- If invalid, display a clear error message and do not store the record
 
-- Confirm the form was submitted using:
+---
 
-```php
-$_SERVER['REQUEST_METHOD'] === 'POST'
+### 4) Admin Page
+
+Create an admin page that:
+
+- Displays **all registration records** from the database in a table
+- Allows the admin to **update** and **delete** records as needed
+
+---
+
+### 5) CRUD Requirements
+
+Your application must support:
+
+- **Create:** Add a new registration
+- **Read:** Display all registrations
+- **Update:** Edit an existing registration and save changes
+- **Delete:** Remove a registration
+
+---
+
+## Additional Requirements
+
+- Include **code comments** to explain what your code is doing
+- Use secure database coding practices (do not place raw user input directly into SQL)
+- Your pages must be generated dynamically using PHP
+
+---
+
+## Submission
+
+Submit the **GitHub repository link** as your answer on Blackboard 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
