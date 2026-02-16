@@ -25,14 +25,14 @@ Users must be able to register for an event, and an administrator must be able t
 
 ---
 
-### 3) Registration Form
+### 3) Registration Form (5 marks) 
 
 Using the provided HTML form:
 
-- Accept user input and submit it to the server
-- **Sanitize and validate** the form data on the server
-- If valid, **store the registration in the database**
-- If invalid, display a clear error message and do not store the record
+- Accept user input and submit it to the server 
+- **Sanitize and validate** the form data on the server (2 marks) 
+- If valid, **store the registration in the database** 
+- If invalid, display a clear error message and do not store the record 
 
 ---
 
@@ -40,8 +40,8 @@ Using the provided HTML form:
 
 Create an admin page that:
 
-- Displays **all registration records** from the database in a table
-- Allows the admin to **update** and **delete** records as needed
+- Displays **all registration records** from the database in a table 
+- Allows the admin to **update** and **delete** records as needed 
 
 ---
 
@@ -49,16 +49,16 @@ Create an admin page that:
 
 Your application must support:
 
-- **Create:** Add a new registration
-- **Read:** Display all registrations
-- **Update:** Edit an existing registration and save changes
-- **Delete:** Remove a registration
+- **Create:** Add a new registration (5 marks) 
+- **Read:** Display all registrations (5 marks) 
+- **Update:** Edit an existing registration and save changes (5 marks) 
+- **Delete:** Remove a registration (5 marks) 
 
 ---
 
 ## Additional Requirements
 
-- Include **code comments** to explain what your code is doing
+- Include **code comments** to explain what your code is doing (2 marks) 
 - Use secure database coding practices (do not place raw user input directly into SQL)
 
 ---
@@ -67,6 +67,7 @@ Your application must support:
 
 Submit the **GitHub repository link** as your answer on Blackboard 
 
+**Total - / 25 marks **
 
 
 
