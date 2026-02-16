@@ -14,7 +14,7 @@ Users must be able to register for an event, and an administrator must be able t
 
 - Create a **new GitHub repository** for this exam question.
 - Build your application inside that repository.
-- When finished, submit the **link to your repository** as your answer in the LMS.
+- When finished, submit the **link to your repository** as your answer on Blackboard. 
 
 ---
 
