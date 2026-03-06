@@ -50,5 +50,3 @@ $registrations = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="index.php">Back to Registration Form</a>
   </p>
 </main>
-
-<?php require "includes/footer.php" ?>
