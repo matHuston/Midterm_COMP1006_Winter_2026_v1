@@ -24,9 +24,9 @@ if ($lastName === null || $lastName === '' || empty($lastName)) {
 }
 // required field: email with format check
 if ($email === null || $email === '' || empty($email)) {
-    $errors[] = "Hawkmail is required.";
+    $errors[] = "Email is required.";
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = "Hawkmail must be a valid email address.";
+    $errors[] = "Email must be a valid email address.";
 }
 
 // required field: phone with regex
