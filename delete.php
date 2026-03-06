@@ -56,7 +56,7 @@ if (!$registration) {
         <p>This action cannot be undone.</p>
         <p>Continue?</p>
         <br>
-        <!-- delete button sends POST -->
+        <!-- button sends delete POST -->
          <button>Delete Registration</button>
             <a href="admin.php">Cancel</a>
     </form>

@@ -108,11 +108,7 @@ if (!$registration) {
     <p><?= htmlspecialchars($error); ?></p>
   <?php endif; ?>
 
-  <!--
-    This form is pre-filled using the registration data pulled from the database.
-    The admin can edit the values and submit to update the row.
-  -->
-
+  <!-- update form -->
   <form method="post">
     <h4>Registration Info</h4>
     <br>
@@ -154,7 +150,7 @@ if (!$registration) {
     value="<?= htmlspecialchars($registration['email']); ?>"
     required
     >
-    <!-- button starts POST process -->
+    <!-- button starts update POST process -->
     <button>Save Changes</button>
     <a href="admin.php">Cancel</a>
   </form>
