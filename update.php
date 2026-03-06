@@ -115,7 +115,7 @@ if (!$registration) {
 
   <form method="post">
     <h4>Registration Info</h4>
-
+    <br>
     <!-- first name -->
     <label class="form-label">First Name</label>
     <input
@@ -125,7 +125,7 @@ if (!$registration) {
     value="<?= htmlspecialchars($registration['first_name']); ?>"
     required
     >
-
+    <br>
     <!-- last name -->
     <label class="form-label">Last Name</label>
     <input
@@ -135,7 +135,7 @@ if (!$registration) {
     value="<?= htmlspecialchars($registration['last_name']); ?>"
     required
     >
-
+    <br>
     <!-- phone number -->
     <label class="form-label">Phone Number</label>
     <input
@@ -144,7 +144,7 @@ if (!$registration) {
     class="form-control mb-3"
     value="<?= htmlspecialchars($registration['phone']); ?>"
     >
-
+    <br>
     <!-- email address -->
     <label class="form-label">Email</label>
     <input
