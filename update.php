@@ -88,3 +88,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
+/* Load existing data to be echoed in the form */
+$sql = "SELECT * FROM registrations WHERE id = :id";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':id', $regId);
+$stmt->execute();
+
+$registration = $stmt->fetch(PDO::FETCH_ASSOC);
+if (!$registration) {
+    die("Registration not found.");
+}
+// end php
+?> 
+
+<main>
+  <h2>Update Registration #<?= htmlspecialchars($registration['id']); ?></h2>
+
+  <?php if (!empty($error)): ?>
+    <p><?= htmlspecialchars($error); ?></p>
+  <?php endif; ?>
+
+  <!--
+    This form is pre-filled using the registration data pulled from the database.
+    The admin can edit the values and submit to update the row.
+  -->
+
+  <form method="post">
+    <h4>Registration Info</h4>
+
+    <!-- first name -->
+    <label class="form-label">First Name</label>
+    <input
+    type="text"
+    name="first_name"
+    class="form-control mb-3"
+    value="<?= htmlspecialchars($registration['first_name']); ?>"
+    required
+    >
+
+    <!-- last name -->
+    <label class="form-label">Last Name</label>
+    <input
+    type="text"
+    name="last_name"
+    class="form-control mb-3"
+    value="<?= htmlspecialchars($registration['last_name']); ?>"
+    required
+    >
+
+    <!-- phone number -->
+    <label class="form-label">Phone Number</label>
+    <input
+    type="text"
+    name="phone"
+    class="form-control mb-3"
+    value="<?= htmlspecialchars($registration['phone']); ?>"
+    >
+
+    <!-- email address -->
+    <label class="form-label">Email</label>
+    <input
+    type="email"
+    name="email"
+    class="form-control mb-4"
+    value="<?= htmlspecialchars($registration['email']); ?>"
+    required
+    >
+    <!-- button starts POST process -->
+    <button>Save Changes</button>
+    <a href="admin.php">Cancel</a>
+  </form>
+</main>
