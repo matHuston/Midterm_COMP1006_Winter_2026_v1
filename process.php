@@ -31,14 +31,14 @@ if ($email === null || $email === '' || empty($email)) {
 
 // required field: phone with regex
 if ($phone === null || $phone === '' || empty($phone)) {
-    $errors[] = "Telephone number is required.";
+    $errors[] = "Phone number is required.";
 } elseif (
     !filter_var($phone, FILTER_VALIDATE_REGEXP, [
         'options' => ['regexp' => '/^[0-9\-\+\(\)\s]{7,25}$/']
         // this regex allows digits, spaces, parentheses, plus and hyphens
     ])
 ) {
-    $errors[] = "Telephone number format is invalid.";
+    $errors[] = "Phone number format is invalid.";
 }
 
 // error handling
