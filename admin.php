@@ -12,6 +12,8 @@ $registrations = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <main>
   <h1>Registrations</h1>
+  <h4><a href="update.php">>Update a Registration<</a></h4>
+  <h4><a href="delete.php">>Delete a Registration<</a></h4>
 
   <?php if (count($registrations) === 0): ?>
     <p>No registrations yet.</p>
